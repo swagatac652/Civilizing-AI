@@ -241,10 +241,29 @@
                   </div>
                   <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                     <p>
-                      It is a forum to bring attention towards collecting, measuring, managing, mining, and understanding multimodal disinformation, misinformation, and malinformation data from social media. This workshop covers (but not limited to) the following topics: --
+                      With the emergence of ChatGPT, the risk of AI-generated content has reached an alarming apocalypse. ChatGPT has
+                      been declared banned by the school system in NYC [15], Google ads [5], and Stack
+                      Overflow [8], while scientific conferences like ACL [3] and ICML [4] have released new policies
+                      deterring the usage of ChatGPT for scientific writing. After the initial scepticism, ChatGPT has
+                      been seen as a listed author in scientific papers [6, 12], while Elsevier [empty citation] and ACM
+                      [empty citation] have adopted more inclusive guidelines on the use of ChatGPT for scientific writing.
+                      Indeed, detecting AI-generated text has suddenly emerged as a concern that needs immediate attention.
+                      While watermarking as a potential solution to the problem is being studied by OpenAI [19], a handful
+                      of systems that detect AI-generated text such as GPT-2 output detector [18], GLTR [16], GPTZero
+                      [17], have recently been observed in practical use. To address the inevitable question of ownership
+                      attribution for the generated artifacts, the US Copyright Office [13] released a statement stating that
+                      if the content is traditional elements of authorship produced by a machine, the work lacks human
+                      authorship and the office will not register it for copyright. Therefore, AI-generated text detection
+                      is a topic that needs a thorough investigation. In this regard, there are three families of techniques
+                      proposed so far:
                       <br/><br/>
                     <ul>
-                      <li>Development of corpora and annotation guidelines for multimodal fact checking.</li>
+                      <li><b>Watermarking:</b> First introduced in [1], watermarking AI-generated text involves embedding an
+                             imperceptible code or signal to verify the author of a particular text with certainty. OpenAI’s GPT
+                             does this by selecting the next token pseudorandomly (rather than simply choosing the one with the
+                             highest probability) using a cryptographic pseudorandom function whose key is only possessed by
+                             OpenAI . It would be remiss not to mention the most obvious pitfall of this approach, which is that if
+                             the text is altered or modified in any way, detecting the watermark proves to be a difficult task.</li>
                       <li>Computational models for multimodal fact checking.</li>
                      <li> Development of corpora and annotation guidelines for multimodal hate speech detection and classification.</li>
                      <li> Computational models for multimodal hate speech detection and classification.</li>
