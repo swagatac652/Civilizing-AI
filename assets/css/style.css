@@ -463,7 +463,6 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #106eea;
-  margin: 0 auto;
 }
 
 #hero .btn-get-started:hover {
@@ -623,7 +622,8 @@ section {
 }
 
 @media (max-width: 768px) {
-  .breadcrumbs .d-flex {
+  .breadcrumbs .
+  {
     display: block !important;
   }
 
