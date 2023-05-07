@@ -241,8 +241,8 @@
                   </div>
                   <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                     <p>
-                      With the emergence of ChatGPT, the risk of AI-generated content has reached an alarming apocalypse. ChatGPT has
-                      been declared banned by the school system in NYC [15], Google ads [5], and Stack
+                      With the emergence of ChatGPT, the risk of AI-generated content has reached an alarming apocalypse. 
+                      ChatGPT has been declared banned by the school system in NYC [15], Google ads [5], and Stack
                       Overflow [8], while scientific conferences like ACL [3] and ICML [4] have released new policies
                       deterring the usage of ChatGPT for scientific writing. After the initial scepticism, ChatGPT has
                       been seen as a listed author in scientific papers [6, 12], while Elsevier [empty citation] and ACM
@@ -313,15 +313,45 @@
                   </div>
                   <div id="faq2" class="collapse" data-bs-parent=".faq-list">
                     <p>
+                      With the recent and rapid advances in the areas of LLMs and Generative AI, the pre-eminent and
+                      ubiquitous concern is of hallucination. We release a large-scale first of its kind human-annotated data
+                      with detailed annotations on - intrinsic vs. extrinsic hallucinations, and degree of hallucination, and
+                      we ask participants to come up with either black-box factuality Assessment and/or evidence-based
+                      fact-checking. First, we define categories of hallucinations:
                       <ul>
-                        <li>Long papers: Novel, unpublished, high quality research papers. 10 pages excluding references.</li>
-                        <li>Short papers: 5 pages excluding references.</li>
-                        <li>Previously rejected papers:You can attach comments of previously rejected papers (AAAI, neurips) and 1 page cover letter explaining chages made.</li>
-                        <li>Extended abstracts: 2 pages exclusing references. Non archival. can be previously published papers or work in progress.</li>
-                        <li>All papers must be submitted via our EasyChair submission page.</li>
-                        <li>Regular papers will go through a double-blind peer-review process. Extended abstracts may be either single blind (i.e., reviewers are blind, authors have names on submission) or double blind (i.e., authors and reviewers are blind). Only manuscripts in PDF or Microsoft Word format will be accepted.</li>
-                        <li><a href=" http://ceur-ws.org/Vol-XXX/CEURART.zip">Paper template Link 1</a></li>
-                        <li><a href="https://www.overleaf.com/read/gwhxnqcghhdt">Paper template Link 2</a></li>
+                        <li><b>Intrinsic Hallucination:</b>The generated output that contradicts the source content. For instance, in
+                               the abstractive summarization task from Table 1, the generated summary “The first Ebola vaccine
+                               was approved in 2021” contradicts the source content “The first vaccine for Ebola was approved by
+                               the FDA in 2019.”</li>
+                        <li><b>Extrinsic Hallucination:</b>The generated output that cannot be verified from the source content
+                               (i.e., output that can neither be supported nor contradicted by the source). As an example, in the
+                               abstractive summarization task from Table 1 *which table 1?*, the information “China has already
+                               started clinical trials of the COVID-19 vaccine.” is not mentioned in source. We can neither find
+                               evidence for the generated output from the source nor assert that it is wrong. Notably, the extrinsic
+                               hallucination is not always erroneous because it could be from factually correct external information
+                               [125, 181]. Such factual hallucination can be helpful because it recalls additional background
+                               knowledge to improve the informativeness of the generated text. However, in most of the literature,
+                               extrinsic hallucination is still treated with caution because its unverifiable aspect of this additional
+                               information increases the risk from a factual safety perspective.</li>
+                        </ul>
+                         <p> Next, based on the degree of hallucination, we categorize it into three levels:
+                        <ul>
+                        <li><b>Mild:</b>At this level, hallucination can be categorized as minor and the generated output may just
+                               contain innocuous errors or inconsistencies in text. The generated text will not significantly impact
+                               it’s coherence.</li>
+                        <li><b>Moderate:</b>Moderate hallucination will involve more significant errors or distortions in the generated
+                               text. The text may contain nonsensical phrases or ideas that deter from the topic at hand. </li>
+                        <li><b>Alarming:</b>Alarming hallucinations in LLM entail a drastic deviation from the intended output.
+                               Such deviations can also be offensive and are incongruous to the desired output.</li>
+                        </ul>
+                          <p>Detection Methods
+                        <ul>
+                        <li><b>Black-box factuality assessment:</b>Black-box hallucination detection approaches, such as Self130 CheckGPT
+                               [9], endeavor to fact-check models without utilizing an external database of facts. In
+                               the case of SelfCheckGPT, it has the capacity to fact-check models in a zero-resource fashion by
+                               evaluating if the generated facts have similarity or if they contradict each other.</li>
+                       <li><b>Evidence-based fact checking:</b>Evidence based fact checking, such as LLM-Augmenter [14],
+                              leverage the use of task-specific databases or similar reliable resources that contain the accurate facts.</li>
                         </ul>
 
                         <br/><br/>
